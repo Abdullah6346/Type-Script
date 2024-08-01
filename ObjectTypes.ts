@@ -51,9 +51,9 @@ function Pointcoordinate(point:point) {
 }
 Pointcoordinate({x:5,y:7})
 Createuser({name:"gladdy",email:"err",address:"",isActive:true})
-READONLY objections bad behaviour 
+READONLY objections bad behaviour
 type User2 = {
-  readonly _id:[number,string];
+  readonly _id: [number, string];
   name: string;
   address: string;
   isActive: boolean;
@@ -61,13 +61,24 @@ type User2 = {
 };
 
 let newuser: User2 = {
-  _id: [5,"gladdy"],
+  _id: [5, "gladdy"],
   name: "gladdy",
   address: "Not Available",
   isActive: true,
   email: "g@G.com",
 };
-newuser._id[0]=7;
+newuser._id[0] = 7;
 
-console.log(newuser._id[0])
+console.log(newuser._id[0]);
+// Combinations of Types
+type cardnumber = {
+  cardnumber: string;
+};
+type cardDate = {
+  cardDate: string;
+};
+type carDetails=cardnumber & cardDate &{
+  cvv:number 
+}
+
 export {};
