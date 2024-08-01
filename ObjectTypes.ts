@@ -80,5 +80,7 @@ type cardDate = {
 type carDetails=cardnumber & cardDate &{
   cvv:number 
 }
-
 export {};
+// const name:string[]=[]
+const name:Array<string>=[]
+name.push("gladdy")
