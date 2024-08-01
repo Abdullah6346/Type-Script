@@ -51,7 +51,7 @@ function Pointcoordinate(point:point) {
 }
 Pointcoordinate({x:5,y:7})
 Createuser({name:"gladdy",email:"err",address:"",isActive:true})
-READONLY objections bad behaviour
+// READONLY objections bad behaviour
 type User2 = {
   readonly _id: [number, string];
   name: string;
