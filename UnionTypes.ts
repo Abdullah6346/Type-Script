@@ -33,7 +33,7 @@ let getwage: Getwage = {
     return this.basicsalary + this.overtimehour * this.overtimerate;
   },
 };
-// Union types in fuctions 
+// Union types in fuctions
 let wage = getwage.getwage();
 console.log(wage);
 function calid(id: number | string) {
@@ -41,4 +41,24 @@ function calid(id: number | string) {
   console.log(id);
 }
 calid("dagad");
+// biggest mistake it tells that all can be number and all can be string
+// const array: string[] | number[] = [5, "da"];
+
+// correct syntax
+const array: (string | number | boolean)[] = [5, "dyagd", true];
+const arr: Array<number | string> = [5, "65", 8];
+function welcomePeople(x: string[] | string) {
+  if (Array.isArray(x)) {
+    console.log("Hello, " + x.join(" and "));
+  } else {
+    console.log("Welcome lone traveler " + x);
+  }
+}
+welcomePeople(["Abdullah", "Gladdy", "Arab"]);
+// properties in common
+// Return type is inferred as number[] | string
+function getFirstThree(x: number[] | string) {
+  return x.slice(0, 3);
+}
+console.log(getFirstThree("Gladdyisback"));
 export {};
