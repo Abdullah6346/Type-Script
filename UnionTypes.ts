@@ -33,6 +33,12 @@ let getwage: Getwage = {
     return this.basicsalary + this.overtimehour * this.overtimerate;
   },
 };
+// Union types in fuctions 
 let wage = getwage.getwage();
 console.log(wage);
+function calid(id: number | string) {
+  typeof id === "string" ? id.toUpperCase() : id.valueOf(); //managing union types
+  console.log(id);
+}
+calid("dagad");
 export {};
