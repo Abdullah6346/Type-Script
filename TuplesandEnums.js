@@ -13,3 +13,4 @@ firstusr.push(1);
 console.log(firstusr);
 var myseat = "window" /* Getseat.Window */;
 console.log(myseat);
+
